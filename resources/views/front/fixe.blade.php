@@ -441,7 +441,7 @@ padding: 50px 0;
 }
 
 .titres {
-    font-family: 'Kaushan Script', cursive;
+   /*  font-family: 'Kaushan Script', cursive; */
     font-size: 3rem; /* Taille du texte */
     color: #181616; /* Rouge, à modifier selon ton besoin */
     text-align: center; /* Centrer le texte */
