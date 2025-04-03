@@ -126,7 +126,7 @@
 
 <style>
     .btn-bg-primary2 {
-        background-color: #20e419;
+        background-color: #1BA1F2;
         color: #ffffff;
         border: none;
         padding: 10px 20px;
@@ -135,7 +135,7 @@
     }
 
     .btn-bg-secondary2 {
-    background-color: #10ee40; /* Couleur de fond, bleu dans cet exemple */
+    background-color: #1BA1F2; /* Couleur de fond, bleu dans cet exemple */
     color: #ffffff; /* Couleur du texte, blanc dans cet exemple */
     border: none;
     padding: 10px 20px; /* Optionnel, ajuste la taille */
