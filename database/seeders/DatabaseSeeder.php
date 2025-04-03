@@ -102,10 +102,10 @@ class DatabaseSeeder extends Seeder
 
          $cat = new config();
         $cat->frais = '15';
-        $cat->description = 'Notre objectif a pour vocation de prendre soin de votre jardin afin quil soit toujours impeccable, avec ses massifs désherbés, ses arbres bien taillés et sa pelouse parfaitement tondue.';
+        $cat->description = 'Franch Sasu est une compagnie spécialisée dans le domaine du numérique. Présente dans le secteur d\'activité depuis 4 ans. Créés en 2020, nous nous sommes démarqués dans ce secteur d\'activité par notre plateau technique';
        $cat->telephone= '56399165';
-       $cat->email='autodreieck-gmbh@gmail.com';
-       $cat->addresse='Berlin  Avenue Mohamed Melki 1005 El Omrane';
+       $cat->email='franch@gmail.com';
+       $cat->addresse='Douala Bonaberi';
 
         $cat->save(); 
 
