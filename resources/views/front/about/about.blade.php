@@ -59,7 +59,7 @@
             </div>
             <div class="col-xl-8 col-lg-6">
                 <div class="about-content content-right">
-                 <h4>   <span class="axil-breadcrumb-item1 active" aria-current="page"> <i class="far fa-shopping-basket"></i>  {{ \App\Helpers\TranslationHelper::TranslateText('A propos de nous') }}</span> </h4>
+                 <h4>   <span class="axil-breadcrumb-item1 active" aria-current="page"> <i class="far fa-shopping-basket"></i>   {{ \App\Helpers\TranslationHelper::TranslateText($config->titre_apropos) }}</span> </h4>
                    {{--  <span class="title-highlighter highlighter-primary2"> <i class="far fa-shopping-basket"></i>A Propos de nous</span>
                    --}}  <h3 class="title">
                     {{ \App\Helpers\TranslationHelper::TranslateText($config->titre_appros ?? '') }}
