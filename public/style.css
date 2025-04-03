@@ -3,7 +3,7 @@
 }
 
 .btn-success{
-    background-color: #578b07 !important;
+    background-color: #1BA1F2 !important;
 }
 
 .cad-img-favoris{
@@ -54,7 +54,7 @@
     transform: scale(1.5);
 } */
 .btn-bg-primary2 {
-    background-color:rgb(230, 195, 196);
+    background-color:#1BA1F2;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -65,7 +65,7 @@
 
 
 .btn-bg-secondary2 {
-    background-color: #d1b9bb;
+    background-color: #1BA1F2;
     /* Couleur de fond, bleu dans cet exemple */
     color: #ffffff;
     /* Couleur du texte, blanc dans cet exemple */

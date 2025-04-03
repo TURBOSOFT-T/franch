@@ -745,7 +745,7 @@ padding: 50px 0;
                     <div class="col-xl-4 col-lg-12">
                         <div class="copyright-left d-flex flex-wrap justify-content-center">
                             <ul class="quick-link">
-                                <li>(C){{ date('Y') }} marisabelle.com | Tout droit reservé<a href="#"
+                                <li>(C){{ date('Y') }} franch.com | Tout droit reservé<a href="#"
                                         style="color: #c71f17;">
                                         <b> </b>
                                     </a>.</li>

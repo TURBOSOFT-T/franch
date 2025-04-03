@@ -63,7 +63,7 @@
 
     <style>
         .btn-bg-primary2 {
-            background-color: #9c9f40;
+            background-color: #1BA1F2;
             color: #ffffff;
             border: none;
             padding: 10px 20px;
