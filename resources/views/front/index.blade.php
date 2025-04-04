@@ -5,11 +5,17 @@
 
         <head>
             <!-- Bootstrap CSS -->
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 
         </head>
         @php
@@ -40,8 +46,8 @@
                 }
 
                 /*   .blink-text {
-                        animation: blinkText 1s infinite;
-                    } */
+                                    animation: blinkText 1s infinite;
+                                } */
 
                 @keyframes blinkColor {
                     0% {
@@ -1155,20 +1161,19 @@
                                                     class="main-img" width="200" height="200"
                                                     src="{{ Storage::url($service->image) }}" alt="Product Images">
                                             </a>
-                                           
+
                                             <div class="product-hover-action">
                                                 <ul class="cart-action">
                                                     <li class="select-option">
-                                                        <a  class="open-modal" 
-                                                           data-id="{{ $service->id }}" 
-                                                           data-nom="{{ $service->nom }}" 
-                                                           data-description="{{ $service->description }}" 
-                                                           data-image="{{ Storage::url($service->image) }}">
+                                                        <a class="open-modal" data-id="{{ $service->id }}"
+                                                            data-nom="{{ $service->nom }}"
+                                                            data-description="{{ $service->description }}"
+                                                            data-image="{{ Storage::url($service->image) }}">
                                                             {{ \App\Helpers\TranslationHelper::TranslateText('Voir plus') }}
                                                         </a>
                                                     </li>
                                                 </ul>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="product-content">
@@ -1181,16 +1186,14 @@
                                         </div>
                                     </div>
                                 </div>
-
-                              
                             @endforeach
 
 
                         </div>
                     </div>
                 </div>
-               
-                                
+
+
 
                 <!-- End  Best Sellers Product Area  -->
                 <div class="axil-section-gap bg-vista-white1">
@@ -1246,6 +1249,101 @@
                 </div>
 
 
+                <!-- Start Why Choose Area  -->
+                <div class="axil-why-choose-area axil-section-gap pb--50 pb_sm--30">
+                    <div class="container">
+                        <div class="section-title-wrapper section-title-center">
+                            <span class="title-highlighter highlighter-secondary"><i class="fal fa-thumbs-up"></i>Why
+                                Us</span>
+                            <h2 class="title">Why People Choose Us</h2>
+                        </div>
+                        <div class="service-wrapper">
+                            <div
+                                class="row-service row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 row--20">
+                                <div class="col">
+                                    <div class="service-box">
+                                        <div class="icon">
+                                            <img src="./assets/images/icons/service6.png" alt="Service">
+                                        </div>
+                                        <h6 class="title">Fast & Secure Delivery</h6>
+                                    </div>
+                                </div>
+                                <div class="col-service">
+                                    <div class="service-box">
+                                        <div class="icon">
+                                            <img src="./assets/images/icons/service7.png" alt="Service">
+                                        </div>
+                                        <h6 class="title">100% Guarantee On Product</h6>
+                                    </div>
+                                </div>
+                                <div class="col-service">
+                                    <div class="service-box">
+                                        <div class="icon">
+                                            <img src="./assets/images/icons/service8.png" alt="Service">
+                                        </div>
+                                        <h6 class="title">24 Hour Return Policy</h6>
+                                    </div>
+                                </div>
+                                <div class="col-service">
+                                    <div class="service-box">
+                                        <div class="icon">
+                                            <img src="./assets/images/icons/service9.png" alt="Service">
+                                        </div>
+                                        <h6 class="title">24 Hour Return Policy</h6>
+                                    </div>
+                                </div>
+                                <div class="col-service">
+                                    <div class="service-box">
+                                        <div class="icon">
+                                            <img src="./assets/images/icons/service10.png" alt="Service">
+                                        </div>
+                                        <h6 class="title">Next Level Pro Quality</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .service-wrapper {
+                        overflow: hidden;
+                    }
+
+                    .row-service {
+                        display: flex;
+                        animation: scroll 30s linear infinite;
+                        /* Animation en boucle */
+                    }
+
+                    .col-service {
+                        flex: 0 0 auto;
+                        width: 20%;
+                        /* Ajuste la largeur pour qu'il y ait 5 éléments visibles */
+                        padding: 10px;
+                    }
+
+                    @keyframes scroll {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(-100%);
+                        }
+                    }
+                </style>
+
+                <script>
+                    const serviceWrapper = document.querySelector('.service-wrapper');
+                    serviceWrapper.addEventListener('mouseenter', () => {
+                        serviceWrapper.style.animationPlayState = 'paused';
+                    });
+
+                    serviceWrapper.addEventListener('mouseleave', () => {
+                        serviceWrapper.style.animationPlayState = 'running';
+                    });
+                </script>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -1342,41 +1440,44 @@
                     });
                 </script>
 
-<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="serviceModalLabel"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-            </div>
-            <div class="modal-body">
-                <img id="modalImage" src="" alt="" class="img-fluid mb-3" style="border-radius: 8px;">
-                <p id="modalDescription"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll('.open-modal').forEach(button => {
-            button.addEventListener('click', function () {
-                let nom = this.getAttribute('data-nom');
-                let description = this.getAttribute('data-description');
-                let image = this.getAttribute('data-image');
+                <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="serviceModalLabel"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Fermer"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img id="modalImage" src="" alt="" class="img-fluid mb-3"
+                                    style="border-radius: 8px;">
+                                <p id="modalDescription"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.querySelectorAll('.open-modal').forEach(button => {
+                            button.addEventListener('click', function() {
+                                let nom = this.getAttribute('data-nom');
+                                let description = this.getAttribute('data-description');
+                                let image = this.getAttribute('data-image');
 
-                document.getElementById('serviceModalLabel').innerText = nom;
-                document.getElementById('modalDescription').innerText = description;
-                document.getElementById('modalImage').src = image;
+                                document.getElementById('serviceModalLabel').innerText = nom;
+                                document.getElementById('modalDescription').innerText = description;
+                                document.getElementById('modalImage').src = image;
 
-                let serviceModal = new bootstrap.Modal(document.getElementById('serviceModal'));
-                serviceModal.show();
-            });
-        });
-    });
-</script>
+                                let serviceModal = new bootstrap.Modal(document.getElementById('serviceModal'));
+                                serviceModal.show();
+                            });
+                        });
+                    });
+                </script>
 
         </main>
 
