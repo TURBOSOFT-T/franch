@@ -1,5 +1,5 @@
 @extends('front.fixe')
-@section('titre', 'Mes commandes ')
+@section('titre', 'Mo compte ')
 @section('body')
 
 

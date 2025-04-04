@@ -202,7 +202,7 @@
                     </a>
                 </li>  --}}
 
-                {{--    <li>
+                  <li>
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon icon-color-3"><i class="ri-function-fill"></i>
                         </div>
@@ -227,7 +227,7 @@
 
                     </ul>
                 </li>
- --}}
+ 
 
                 @can('product_view')
                     <li>

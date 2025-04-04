@@ -1,5 +1,5 @@
 @extends('front.fixe')
-@section('titre', 'Accueil')
+@section('titre', 'Les actualités')
 @section('body')
     <main>
         @php

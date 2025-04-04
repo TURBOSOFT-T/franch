@@ -2,6 +2,16 @@
 @section('titre', 'Accueil')
 @section('body')
     <main>
+
+        <head>
+            <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        </head>
         @php
             $config = DB::table('configs')->first();
             $service = DB::table('services')->get();
@@ -12,7 +22,7 @@
         <main class="main-wrapper">
 
 
-      
+
 
             <style>
                 @keyframes blinkText {
@@ -29,9 +39,9 @@
                     }
                 }
 
-              /*   .blink-text {
-                    animation: blinkText 1s infinite;
-                } */
+                /*   .blink-text {
+                        animation: blinkText 1s infinite;
+                    } */
 
                 @keyframes blinkColor {
                     0% {
@@ -95,18 +105,24 @@
                 }
 
                 .carousel-item {
-    background-color: #333333; /* Fond gris foncé pour la bannière */
-    border: 5px solid #ffffff; /* Bordure blanche de 5px */
-    border-radius: 20px; /* Arrondi des coins */
-    overflow: hidden;
-   
-}
+                    background-color: #333333;
+                    /* Fond gris foncé pour la bannière */
+                    border: 5px solid #ffffff;
+                    /* Bordure blanche de 5px */
+                    border-radius: 20px;
+                    /* Arrondi des coins */
+                    overflow: hidden;
 
-@media (max-width: 768px) { /* Pour les écrans mobiles */
-    .carousel-item img {
-        max-height: 100vh; /* Afficher l'image entière sur mobile */
-    }
-}
+                }
+
+                @media (max-width: 768px) {
+
+                    /* Pour les écrans mobiles */
+                    .carousel-item img {
+                        max-height: 100vh;
+                        /* Afficher l'image entière sur mobile */
+                    }
+                }
             </style>
 
             <div class="container-fluid px-0 mb-5">
@@ -124,7 +140,7 @@
                                             <span class="subtitle"style="font-size: 3rem; color: #ffffff"><i
                                                     class="fas fa-fire"></i>
 
-                                                {{ \App\Helpers\TranslationHelper::TranslateText($banner->titre ?? ' ') }} 
+                                                {{ \App\Helpers\TranslationHelper::TranslateText($banner->titre ?? ' ') }}
                                             </span>
                                             <p style="font-size: 3rem; color: #ffffff;  margin-top: 10px; ">
 
@@ -163,7 +179,7 @@
             </div>
 
 
-           
+
             <div class="axil-poster axil-section-gap pb--0">
                 <div class="container">
                     <div class="row g-lg-5 g-4">
@@ -181,10 +197,10 @@
                                                 <i class="fal fa-long-arrow-right"></i></span>
                                         </div>
                                     </div>
-                                    
+
                                 </a>
                             </div>
-                          
+
                         </div>
                         <div class="col-lg-6">
                             <div class="single-poster">
@@ -199,10 +215,10 @@
                                             </h3>
                                         </div>
                                     </div>
-                                  
+
                                 </a>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -210,17 +226,18 @@
             </div>
             <!-- End Axil Product Poster Area  -->
 
-<br>
-<br>
+            <br>
+            <br>
 
-            <div class="axil-best-seller-product-area bg-vista-white1 axil-section-gap pb--50 pb_sm--30" style="margin-bottom: 1.875em">
+            <div class="axil-best-seller-product-area bg-vista-white1 axil-section-gap pb--50 pb_sm--30"
+                style="margin-bottom: 1.875em">
                 <div class="container">
                     <div class="section-title-wrapper section-title-center">
                         <h1 class="title">
                             <span
                                 class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les meilleures ventes') }}</span>
                         </h1>
-                        </div>
+                    </div>
                     <div
                         class="new-arrivals-product-activation-2 slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide product-slide-mobile">
                         @foreach ($produitsLesPlusVendus as $produit)
@@ -307,8 +324,8 @@
                                         <div class="inner">
                                             <div class="product-rating">
                                                 <span class="icon">
-    
-    
+
+
                                                     @php
                                                         $rate = ceil($produit->getReview->avg('rate'));
                                                     @endphp
@@ -319,7 +336,7 @@
                                                             <i style="color: rgb(150, 150, 60)" class="far fa-star"></i>
                                                         @endif
                                                     @endfor
-    
+
                                                 </span>
                                                 <span class="rating-number">({{ $produit->reviews->count() }})</span>
                                             </div>
@@ -369,7 +386,7 @@
 
                                                 </h6>
                                             </div>
-                                       
+
                                         </div>
                                     </div>
                                 </div>
@@ -383,7 +400,7 @@
             <!-- End Slider Area -->
             <!-- Start Categorie Area  -->
             <!-- Start Categorie Area  -->
-  
+
             <div class="axil-categorie-area bg-color-white axil-section-gapcommon">
                 <div class="container">
                     <div class="section-title-wrapper section-title-center">
@@ -391,7 +408,7 @@
                             <span
                                 class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les categories') }}</span>
                         </h1>
-                        </div>
+                    </div>
                     <div class="categrie-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
                         <style>
 
@@ -421,18 +438,18 @@
 
 
             <div class="axil-product-area bg-color-white axil-section-gap">
-               
+
                 <div class="container">
 
-                    
-                 
+
+
                     <div class="section-title-wrapper">
-                     
+
                         <div class="section-title-wrapper section-title-center">
-                        <h1 class="title">
-                            <span
-                                class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Parcourir nos produits') }}</span>
-                        </h1>
+                            <h1 class="title">
+                                <span
+                                    class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Parcourir nos produits') }}</span>
+                            </h1>
                         </div>
                     </div>
 
@@ -443,166 +460,164 @@
                         <div class="slick-single-layout">
                             <div class="row row--15">
                                 @foreach ($produits as $produit)
-                                   
-                                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                                            <div class="axil-product product-style-one">
-                                                <div class="thumbnail">
-                                                    <a
-                                                        href="{{ route('details-produits', ['id' => $produit->id, 'slug' => Str::slug(Str::limit($produit->nom, 10))]) }}">
-                                                        <img style="border-radius: 8px; width: 300px; height: 200px; object-fit: cover;"
-                                                            data-sal="zoom-out" data-sal-delay="200"
-                                                            data-sal-duration="800" loading="lazy" class="main-img"
-                                                            border-radius="8px" src="{{ Storage::url($produit->photo) }}"
-                                                            alt="Product Images">
-                                                        <img style="border-radius: 8px; width: 300px; height: 200px; object-fit: cover;"
-                                                            class="hover-img" border-radius="8px"
-                                                            src="{{ Storage::url($produit->photo) }}"
-                                                            alt="Product Images">
-                                                    </a>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
+                                        <div class="axil-product product-style-one">
+                                            <div class="thumbnail">
+                                                <a
+                                                    href="{{ route('details-produits', ['id' => $produit->id, 'slug' => Str::slug(Str::limit($produit->nom, 10))]) }}">
+                                                    <img style="border-radius: 8px; width: 300px; height: 200px; object-fit: cover;"
+                                                        data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800"
+                                                        loading="lazy" class="main-img" border-radius="8px"
+                                                        src="{{ Storage::url($produit->photo) }}" alt="Product Images">
+                                                    <img style="border-radius: 8px; width: 300px; height: 200px; object-fit: cover;"
+                                                        class="hover-img" border-radius="8px"
+                                                        src="{{ Storage::url($produit->photo) }}" alt="Product Images">
+                                                </a>
 
-                                                    <style>
-                                                        .top-left {
-                                                            position: absolute;
-                                                            top: 8px;
-                                                            right: 18px;
-                                                            color: #bd9944;
-                                                        }
-                                                    </style>
+                                                <style>
+                                                    .top-left {
+                                                        position: absolute;
+                                                        top: 8px;
+                                                        right: 18px;
+                                                        color: #bd9944;
+                                                    }
+                                                </style>
 
-                                                    <div class="top-left" style="background-color: #bd9944;color: white;">
-                                                        <span>
-                                                            @if ($produit->inPromotion())
-                                                                <span>
-                                                                    -{{ $produit->inPromotion()->pourcentage }}%</span>
-                                                            @endif
-                                                        </span>
-                                                    </div>
-                                                    <div class="product-hover-action">
-                                                        <ul class="cart-action">
-                                                            {{-- <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                                    data-bs-target="#{{ $produit->id }}"><i class="far fa-eye"></i></a></li> --}}
-                                                            <li class="select-option2">
-                                                                <a onclick="AddToCart( {{ $produit->id }} )">
-                                                                    {{ \App\Helpers\TranslationHelper::TranslateText('Ajouter au panier') }}
-                                                                </a>
-                                                            </li>
-
-
-                                                            @if (Auth()->user())
-                                                                @php
-
-                                                                    $count = DB::table('favoris')
-                                                                        ->where('id_user', Auth()->user()->id)
-                                                                        ->where('id_produit', $produit->id)
-                                                                        ->count();
-                                                                @endphp
-
-
-                                                                <li class="wishlist"><a
-                                                                        onclick="AddFavoris({{ $produit->id }})"
-                                                                        @if ($count == 0) class="" style="color:#000000" @else class="" style="color: #dc3545; background-color:#dc3545" @endif>
-
-                                                                        <i class="far fa-heart"></i></a></li>
-                                                            @endif
-
-
-
-                                                            <style>
-                                                                .select-option2 {
-                                                                    background-color: #5EA13C;
-                                                                    color: #ffffff;
-                                                                    border: none;
-                                                                    padding: 10px 20px;
-                                                                    border-radius: 5px;
-                                                                    text-decoration: none;
-                                                                }
-
-                                                                .favori-actif {
-                                                                    color: #bd9944;
-                                                                    /* Changez la couleur selon votre besoin */
-                                                                }
-                                                            </style>
-
-                                                        </ul>
-                                                    </div>
+                                                <div class="top-left" style="background-color: #bd9944;color: white;">
+                                                    <span>
+                                                        @if ($produit->inPromotion())
+                                                            <span>
+                                                                -{{ $produit->inPromotion()->pourcentage }}%</span>
+                                                        @endif
+                                                    </span>
                                                 </div>
-                                                <div class="product-content">
-                                                    <div class="inner">
-                                                        <div class="product-rating">
-                                                            <span class="icon">
-                
-                
-                                                                @php
-                                                                    $rate = ceil($produit->getReview->avg('rate'));
-                                                                @endphp
-                                                                @for ($i = 1; $i <= 5; $i++)
-                                                                    @if ($rate >= $i)
-                                                                        <i style="color: rgb(161, 161, 58)" class="fa fa-star"></i>
-                                                                    @else
-                                                                        <i style="color: rgb(150, 150, 60)" class="far fa-star"></i>
-                                                                    @endif
-                                                                @endfor
-                
-                                                            </span>
-                                                            <span class="rating-number">({{ $produit->reviews->count() }})</span>
-                                                        </div>
-
-                                                        <div class="">
-                                                            <h5 class="title"><a
-                                                                    href="{{ route('details-produits', ['id' => $produit->id, 'slug' => Str::slug(Str::limit($produit->nom, 10))]) }}">
-                                                                    {{ \App\Helpers\TranslationHelper::TranslateText(Str::limit($produit->nom, 15)) }}
-
-                                                                </a>
-                                                            </h5>
-                                                        </div>
-                                                        <div class="product__price__wrapper">
-                                                            <h6 class="product-price--main">
+                                                <div class="product-hover-action">
+                                                    <ul class="cart-action">
+                                                        {{-- <li class="quickview"><a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#{{ $produit->id }}"><i class="far fa-eye"></i></a></li> --}}
+                                                        <li class="select-option2">
+                                                            <a onclick="AddToCart( {{ $produit->id }} )">
+                                                                {{ \App\Helpers\TranslationHelper::TranslateText('Ajouter au panier') }}
+                                                            </a>
+                                                        </li>
 
 
-                                                                @if ($produit->inPromotion())
-                                                                    <div class="row">
-                                                                        <div class="col-sm-6 col-6">
+                                                        @if (Auth()->user())
+                                                            @php
 
-                                                                            <b class="text-succes"
-                                                                                style="color: #bd9944">
-                                                                                {{ $produit->getPrice() }}
-                                                                                <x-devise></x-devise>
-                                                                            </b>
-                                                                        </div>
-
-                                                                        <div class="col-sm-6 col-6 text-end">
-                                                                            <strike>
+                                                                $count = DB::table('favoris')
+                                                                    ->where('id_user', Auth()->user()->id)
+                                                                    ->where('id_produit', $produit->id)
+                                                                    ->count();
+                                                            @endphp
 
 
-                                                                                <span
-                                                                                    style="font-size: 1.7rem; color: #dc3545; font-weight: bold;">
-                                                                                    {{ $produit->prix }}
-                                                                                    <x-devise></x-devise>
-                                                                                </span>
+                                                            <li class="wishlist"><a
+                                                                    onclick="AddFavoris({{ $produit->id }})"
+                                                                    @if ($count == 0) class="" style="color:#000000" @else class="" style="color: #dc3545; background-color:#dc3545" @endif>
+
+                                                                    <i class="far fa-heart"></i></a></li>
+                                                        @endif
 
 
-                                                                            </strike>
-                                                                        </div>
-                                                                    @else
-                                                                        {{-- {{ $produit->getPrice() }}DT --}}
+
+                                                        <style>
+                                                            .select-option2 {
+                                                                background-color: #5EA13C;
+                                                                color: #ffffff;
+                                                                border: none;
+                                                                padding: 10px 20px;
+                                                                border-radius: 5px;
+                                                                text-decoration: none;
+                                                            }
+
+                                                            .favori-actif {
+                                                                color: #bd9944;
+                                                                /* Changez la couleur selon votre besoin */
+                                                            }
+                                                        </style>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="inner">
+                                                    <div class="product-rating">
+                                                        <span class="icon">
 
 
-                                                                        <span class="price current-price"
-                                                                            style="font-size: 1.7rem;">
+                                                            @php
+                                                                $rate = ceil($produit->getReview->avg('rate'));
+                                                            @endphp
+                                                            @for ($i = 1; $i <= 5; $i++)
+                                                                @if ($rate >= $i)
+                                                                    <i style="color: rgb(161, 161, 58)"
+                                                                        class="fa fa-star"></i>
+                                                                @else
+                                                                    <i style="color: rgb(150, 150, 60)"
+                                                                        class="far fa-star"></i>
+                                                                @endif
+                                                            @endfor
+
+                                                        </span>
+                                                        <span
+                                                            class="rating-number">({{ $produit->reviews->count() }})</span>
+                                                    </div>
+
+                                                    <div class="">
+                                                        <h5 class="title"><a
+                                                                href="{{ route('details-produits', ['id' => $produit->id, 'slug' => Str::slug(Str::limit($produit->nom, 10))]) }}">
+                                                                {{ \App\Helpers\TranslationHelper::TranslateText(Str::limit($produit->nom, 15)) }}
+
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="product__price__wrapper">
+                                                        <h6 class="product-price--main">
+
+
+                                                            @if ($produit->inPromotion())
+                                                                <div class="row">
+                                                                    <div class="col-sm-6 col-6">
+
+                                                                        <b class="text-succes" style="color: #bd9944">
                                                                             {{ $produit->getPrice() }}
                                                                             <x-devise></x-devise>
-                                                                            </b></span>
-                                                                @endif
+                                                                        </b>
+                                                                    </div>
+
+                                                                    <div class="col-sm-6 col-6 text-end">
+                                                                        <strike>
 
 
-                                                            </h6>
-                                                        </div>
-                                                       
+                                                                            <span
+                                                                                style="font-size: 1.7rem; color: #dc3545; font-weight: bold;">
+                                                                                {{ $produit->prix }}
+                                                                                <x-devise></x-devise>
+                                                                            </span>
+
+
+                                                                        </strike>
+                                                                    </div>
+                                                                @else
+                                                                    {{-- {{ $produit->getPrice() }}DT --}}
+
+
+                                                                    <span class="price current-price"
+                                                                        style="font-size: 1.7rem;">
+                                                                        {{ $produit->getPrice() }}
+                                                                        <x-devise></x-devise>
+                                                                        </b></span>
+                                                            @endif
+
+
+                                                        </h6>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
-                                  
+                                    </div>
                                 @endforeach
 
                             </div>
@@ -852,7 +867,7 @@
                             {{ \App\Helpers\TranslationHelper::TranslateText('Produits en promotion') }}
                         </h2>
                     </div>
-                  
+
                     <div
                         class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
                         <div class="slick-single-layout">
@@ -918,24 +933,27 @@
                                                                     {{--   {{ \App\Helpers\TranslationHelper::TranslateText( Str::limit($produit->description, 20)) }}
  --}}
                                                                 </a></h5>
-                                                                <div class="product-rating">
-                                                                    <span class="icon">
-                        
-                        
-                                                                        @php
-                                                                            $rate = ceil($produit->getReview->avg('rate'));
-                                                                        @endphp
-                                                                        @for ($i = 1; $i <= 5; $i++)
-                                                                            @if ($rate >= $i)
-                                                                                <i style="color: rgb(161, 161, 58)" class="fa fa-star"></i>
-                                                                            @else
-                                                                                <i style="color: rgb(150, 150, 60)" class="far fa-star"></i>
-                                                                            @endif
-                                                                        @endfor
-                        
-                                                                    </span>
-                                                                    <span class="rating-number">({{ $produit->reviews->count() }})</span>
-                                                                </div>
+                                                            <div class="product-rating">
+                                                                <span class="icon">
+
+
+                                                                    @php
+                                                                        $rate = ceil($produit->getReview->avg('rate'));
+                                                                    @endphp
+                                                                    @for ($i = 1; $i <= 5; $i++)
+                                                                        @if ($rate >= $i)
+                                                                            <i style="color: rgb(161, 161, 58)"
+                                                                                class="fa fa-star"></i>
+                                                                        @else
+                                                                            <i style="color: rgb(150, 150, 60)"
+                                                                                class="far fa-star"></i>
+                                                                        @endif
+                                                                    @endfor
+
+                                                                </span>
+                                                                <span
+                                                                    class="rating-number">({{ $produit->reviews->count() }})</span>
+                                                            </div>
                                                             <div class="product-price-variant">
                                                                 <span class="price-text"> {!! \App\Helpers\TranslationHelper::TranslateText('Coût') !!}:</span>
                                                                 <span class="price current-price"> <b class="text-succes"
@@ -984,7 +1002,7 @@
                             <span
                                 class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les retours de nos clients') }}</span>
                         </h1>
-                        </div>
+                    </div>
 
                     <!-- End .section-title -->
                     <div
@@ -1047,219 +1065,318 @@
             </div>
 
 
-        <!-- Start Best Sellers Product Area  -->
-        <div class="axil-best-seller-product-area bg-color-white axil-section-gap pb--0">
-            <div class="container">
-                <div class="product-area pb--50">
-                    <div class="section-title-wrapper section-title-center">
-                        <h1 class="title">
-                            <span
-                                class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les formations') }}</span>
-                        </h1>
+            <!-- Start Best Sellers Product Area  -->
+            <div class="axil-best-seller-product-area bg-color-white axil-section-gap pb--0">
+                <div class="container">
+                    <div class="product-area pb--50">
+                        <div class="section-title-wrapper section-title-center">
+                            <h1 class="title">
+                                <span
+                                    class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les formations') }}</span>
+                            </h1>
                         </div>
-                    <div class="new-arrivals-product-activation-2 slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide product-slide-mobile">
-                       
-                        @foreach ($lastformations as $formation)
-                        <div class="slick-single-layout">
-                            <div class="axil-product product-style-three">
-                                <div class="thumbnail">
-                                    <a href="{{ route('details-formation', ['id' => $formation->id, 'slug' => Str::slug(Str::limit($formation->titre, 10))]) }}">
-                                        <img style="border-radius: 8px; width: 400px; height: 300px; object-fit: cover;"
-                                        src="{{ Storage::url($formation->image) }}" alt="Blog Images">     </a>
-                                
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <div class="product-rating">
-                                            {{-- <span class="icon">
+                        <div
+                            class="new-arrivals-product-activation-2 slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide product-slide-mobile">
+
+                            @foreach ($lastformations as $formation)
+                                <div class="slick-single-layout">
+                                    <div class="axil-product product-style-three">
+                                        <div class="thumbnail">
+                                            <a
+                                                href="{{ route('details-formation', ['id' => $formation->id, 'slug' => Str::slug(Str::limit($formation->titre, 10))]) }}">
+                                                <img style="border-radius: 8px; width: 400px; height: 300px; object-fit: cover;"
+                                                    src="{{ Storage::url($formation->image) }}" alt="Blog Images"> </a>
+
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="inner">
+                                                <div class="product-rating">
+                                                    {{-- <span class="icon">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                     </span> --}}
-                                          {{--   <span class="rating-number">(18)</span> --}}
-                                        </div>
-                                        <h5 class="title"><a  href="{{ route('details-formation', ['id' => $formation->id, 'slug' => Str::slug(Str::limit($formation->titre, 10))]) }}">
-                                            {{ \App\Helpers\TranslationHelper::TranslateText($formation->titre ?? '') }}
-                                        </a></h5>
-                                        {{-- <div class="product-price-variant">
+                                                    {{--   <span class="rating-number">(18)</span> --}}
+                                                </div>
+                                                <h5 class="title"><a
+                                                        href="{{ route('details-formation', ['id' => $formation->id, 'slug' => Str::slug(Str::limit($formation->titre, 10))]) }}">
+                                                        {{ \App\Helpers\TranslationHelper::TranslateText($formation->titre ?? '') }}
+                                                    </a></h5>
+                                                {{-- <div class="product-price-variant">
                                             <span class="price current-price">$30</span>
                                             <span class="price old-price">$50</span>
                                         </div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                  
-                    
-                        <!-- End .slick-single-layout -->
-                    </div>
-                </div>
-
-                
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center mt--20 mt_sm--0">
-                    <a href="{{ url('formation') }}" class="axil-btn btn-bg-primary2 btn-load-more">
-
-                        {{ \App\Helpers\TranslationHelper::TranslateText('Voir toutes les formations') }}
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- End  Best Sellers Product Area  -->
-            <div class="axil-section-gap bg-vista-white1">
-                <div class="container">
-                    <div class="section-title-wrapper section-title-center">
-                        <h1 class="title">
-                            <span
-                                class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les actualités') }}</span>
-                        </h1>
-                        </div>
-                    <div class="row g-5">
-                        @foreach ($events as $event)
-                            <div class="col-lg-4">
-                                <div class="content-blog blog-grid">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a
-                                                href="{{ route('details-actualites', ['id' => $event->id, 'slug' => Str::slug(Str::limit($event->titre, 10))]) }}">
-                                                <img style="border-radius: 8px; width: 400px; height: 300px; object-fit: cover;"
-                                                    src="{{ Storage::url($event->image) }}" alt="Blog Images">
-                                            </a>
-                                            {{-- <div class="blog-category">
-                                        <a href="#">Digital Art's</a>
-                                    </div> --}}
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title"><a
-                                                    href="{{ route('details-actualites', ['id' => $event->id, 'slug' => Str::slug(Str::limit($event->titre, 10))]) }}">
-                                                    {{ \App\Helpers\TranslationHelper::TranslateText($event->titre ?? '') }}
-                                                </a></h5>
-                                            <div class="read-more-btn">
-                                                <a class="axil-btn right-icon"
-                                                    href="{{ route('details-actualites', ['id' => $event->id, 'slug' => Str::slug(Str::limit($event->titre, 10))]) }}">
-                                                    {{ \App\Helpers\TranslationHelper::TranslateText('Voir plus') }}
-                                                    <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
 
+
+                            <!-- End .slick-single-layout -->
+                        </div>
                     </div>
+
+
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center mt--20 mt_sm--0">
-                        <a href="{{ url('actualites') }}" class="axil-btn btn-bg-primary2 btn-load-more">
+                        <a href="{{ url('formation') }}" class="axil-btn btn-bg-primary2 btn-load-more">
 
-                            {{ \App\Helpers\TranslationHelper::TranslateText('Voir toutes les actualités') }}
+                            {{ \App\Helpers\TranslationHelper::TranslateText('Voir toutes les formations') }}
                         </a>
                     </div>
                 </div>
             </div>
 
 
+            <div class="axil-product-area bg-color-white axil-section-gap pb--50 pb_sm--30">
+                <div class="container">
+                    <div class="section-title-wrapper section-title-center">
+                        <h1 class="title">
+                            <span
+                                class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les services') }}</span>
+                        </h1>
+                    </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                {{ \App\Helpers\TranslationHelper::TranslateText('Témoignage') }}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
+                    <!-- End .section-title -->
+                    <div>
+                        <div class="recent-product-activation slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide">
+
+                            <!-- End .slick-single-layout -->
+                            @foreach ($services as $service)
+                                <div class="slick-single-layout">
+                                    <div class="axil-product">
+                                        <div class="thumbnail">
+                                            <a href="#">
+                                                <img style="border-radius: 8px; width: 300px; height: 200px; object-fit: cover;"
+                                                    class="main-img" width="200" height="200"
+                                                    src="{{ Storage::url($service->image) }}" alt="Product Images">
+                                            </a>
+                                           
+                                            <div class="product-hover-action">
+                                                <ul class="cart-action">
+                                                    <li class="select-option">
+                                                        <a  class="open-modal" 
+                                                           data-id="{{ $service->id }}" 
+                                                           data-nom="{{ $service->nom }}" 
+                                                           data-description="{{ $service->description }}" 
+                                                           data-image="{{ Storage::url($service->image) }}">
+                                                            {{ \App\Helpers\TranslationHelper::TranslateText('Voir plus') }}
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="inner">
+                                                <h5 class="title"><a href="#">
+                                                        {{ \App\Helpers\TranslationHelper::TranslateText($service->nom ?? '') }}</a>
+                                                </h5>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                              
+                            @endforeach
+
+
                         </div>
-
-
-
-                        <div class="modal-body">
-                            <form id="testimonialForm" action="{{ route('testimonial.store') }}" method="POST"
-                                class="testimonial-form p-4 rounded shadow-sm bg-light">
-                                @csrf
-                                <div class="form-group mb-4">
-                                    <label for="name" class="form-label text-muted">
-                                        {{ \App\Helpers\TranslationHelper::TranslateText('Nom') }}</label>
-                                    <input type="text" class="form-control border-0 rounded-pill shadow-sm"
-                                        id="name" name="name" required>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="testimonial" class="form-label text-muted">
-                                        {{ \App\Helpers\TranslationHelper::TranslateText('Message') }}</label>
-                                    <textarea class="form-control border-0 rounded-3 shadow-sm" id="testimonial" name="message" rows="8" required></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-bg-primary2 rounded-pill shadow">
-                                        {{ \App\Helpers\TranslationHelper::TranslateText('Envoyer') }}</button>
-                                </div>
-                            </form>
-
-                            @if ($errors->any())
-                                <div class="alert alert-danger mt-4">
-                                    <ul class="mb-0">
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-
-                            @if (session('success'))
-                                <div class="alert alert-success mt-4">
-                                    {{ session('success') }}
-                                </div>
-                            @endif
-                            <style>
-
-                            </style>
-
-                        </div>
-
-
-
                     </div>
                 </div>
-            </div>
+               
+                                
 
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('#testimonialForm').on('submit', function(e) {
-                        e.preventDefault(); // Empêcher l'envoi classique du formulaire
+                <!-- End  Best Sellers Product Area  -->
+                <div class="axil-section-gap bg-vista-white1">
+                    <div class="container">
+                        <div class="section-title-wrapper section-title-center">
+                            <h1 class="title">
+                                <span
+                                    class="blink-text titres">{{ \App\Helpers\TranslationHelper::TranslateText('Les actualités') }}</span>
+                            </h1>
+                        </div>
+                        <div class="row g-5">
+                            @foreach ($events as $event)
+                                <div class="col-lg-4">
+                                    <div class="content-blog blog-grid">
+                                        <div class="inner">
+                                            <div class="thumbnail">
+                                                <a
+                                                    href="{{ route('details-actualites', ['id' => $event->id, 'slug' => Str::slug(Str::limit($event->titre, 10))]) }}">
+                                                    <img style="border-radius: 8px; width: 400px; height: 300px; object-fit: cover;"
+                                                        src="{{ Storage::url($event->image) }}" alt="Blog Images">
+                                                </a>
+                                                {{-- <div class="blog-category">
+                                        <a href="#">Digital Art's</a>
+                                    </div> --}}
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="title"><a
+                                                        href="{{ route('details-actualites', ['id' => $event->id, 'slug' => Str::slug(Str::limit($event->titre, 10))]) }}">
+                                                        {{ \App\Helpers\TranslationHelper::TranslateText($event->titre ?? '') }}
+                                                    </a></h5>
+                                                <div class="read-more-btn">
+                                                    <a class="axil-btn right-icon"
+                                                        href="{{ route('details-actualites', ['id' => $event->id, 'slug' => Str::slug(Str::limit($event->titre, 10))]) }}">
+                                                        {{ \App\Helpers\TranslationHelper::TranslateText('Voir plus') }}
+                                                        <i class="fal fa-long-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
 
-                        $.ajax({
-                            url: $(this).attr('action'),
-                            method: $(this).attr('method'),
-                            data: $(this).serialize(),
-                            success: function(response) {
-                                // Afficher le message de succès
-                                $('#testimonialModal').modal('hide'); // Fermer le modal
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center mt--20 mt_sm--0">
+                            <a href="{{ url('actualites') }}" class="axil-btn btn-bg-primary2 btn-load-more">
 
-                                $('#successMessage').text(
-                                    'Témoignage créé avec succès! Il sera valide après confirmation des administrateurs'
+                                {{ \App\Helpers\TranslationHelper::TranslateText('Voir toutes les actualités') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                                ).show();
 
-                                setTimeout(function() {
-                                    location.reload();
-                                }, 5000);
-                            },
-                            error: function(response) {
-                                // Afficher un message d'erreur si nécessaire
-                                $('#errorMessage').text('Une erreur est survenue.')
-                                    .show(); // Afficher le message d'erreur
-                            }
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    {{ \App\Helpers\TranslationHelper::TranslateText('Témoignage') }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+
+
+                            <div class="modal-body">
+                                <form id="testimonialForm" action="{{ route('testimonial.store') }}" method="POST"
+                                    class="testimonial-form p-4 rounded shadow-sm bg-light">
+                                    @csrf
+                                    <div class="form-group mb-4">
+                                        <label for="name" class="form-label text-muted">
+                                            {{ \App\Helpers\TranslationHelper::TranslateText('Nom') }}</label>
+                                        <input type="text" class="form-control border-0 rounded-pill shadow-sm"
+                                            id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="testimonial" class="form-label text-muted">
+                                            {{ \App\Helpers\TranslationHelper::TranslateText('Message') }}</label>
+                                        <textarea class="form-control border-0 rounded-3 shadow-sm" id="testimonial" name="message" rows="8" required></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-bg-primary2 rounded-pill shadow">
+                                            {{ \App\Helpers\TranslationHelper::TranslateText('Envoyer') }}</button>
+                                    </div>
+                                </form>
+
+                                @if ($errors->any())
+                                    <div class="alert alert-danger mt-4">
+                                        <ul class="mb-0">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+
+                                @if (session('success'))
+                                    <div class="alert alert-success mt-4">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+                                <style>
+
+                                </style>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('#testimonialForm').on('submit', function(e) {
+                            e.preventDefault(); // Empêcher l'envoi classique du formulaire
+
+                            $.ajax({
+                                url: $(this).attr('action'),
+                                method: $(this).attr('method'),
+                                data: $(this).serialize(),
+                                success: function(response) {
+                                    // Afficher le message de succès
+                                    $('#testimonialModal').modal('hide'); // Fermer le modal
+
+                                    $('#successMessage').text(
+                                        'Témoignage créé avec succès! Il sera valide après confirmation des administrateurs'
+
+                                    ).show();
+
+                                    setTimeout(function() {
+                                        location.reload();
+                                    }, 5000);
+                                },
+                                error: function(response) {
+                                    // Afficher un message d'erreur si nécessaire
+                                    $('#errorMessage').text('Une erreur est survenue.')
+                                        .show(); // Afficher le message d'erreur
+                                }
+                            });
                         });
                     });
-                });
-            </script>
+                </script>
 
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="serviceModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="" class="img-fluid mb-3" style="border-radius: 8px;">
+                <p id="modalDescription"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.open-modal').forEach(button => {
+            button.addEventListener('click', function () {
+                let nom = this.getAttribute('data-nom');
+                let description = this.getAttribute('data-description');
+                let image = this.getAttribute('data-image');
 
+                document.getElementById('serviceModalLabel').innerText = nom;
+                document.getElementById('modalDescription').innerText = description;
+                document.getElementById('modalImage').src = image;
+
+                let serviceModal = new bootstrap.Modal(document.getElementById('serviceModal'));
+                serviceModal.show();
+            });
+        });
+    });
+</script>
 
         </main>
 
