@@ -1316,6 +1316,8 @@
                         /* Animation en boucle */
                     }
 
+                    
+
                     .col-service {
                         flex: 0 0 auto;
                         width: 20%;
